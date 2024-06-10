@@ -102,13 +102,13 @@ button{
         let content = document.getElementById("content");
         let apiData = async function(){
             return fetch('https://fakestoreapi.com/products').then(res=>res.json().then(data=>{
-               data.map(raj=>{(content.innerHTML=content.innerHTML+`<div class="box">
-                <img src=${raj.Title}>
-                <h4>${raj.title}</h4><br>
-                <p> ${raj.rating.rate}</p>
-                <h3 >$${raj.price}</h3>
+               data.map(mani=>{(content.innerHTML=content.innerHTML+`<div class="box">
+                <img src=${mani.Title}>
+                <h4>${mani.title}</h4><br>
+                <p> ${mani.rating.rate}</p>
+                <h3 >$${mani.price}</h3>
                 
-                <div class='hide'>${raj.description} <button>Add</button></div>
+                <div class='hide'>${mani.description} <button>Add</button></div>
                 </div>`)})
             }))
         }
