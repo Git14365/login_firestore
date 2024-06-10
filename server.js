@@ -21,7 +21,7 @@ app.post('/signup', async (req, res) => {
   const {username, email, password } = req.body;
 
   try {
-    const existingUser = await db.collection('rajesh').where('email', '==', email).get();
+    const existingUser = await db.collection('mani').where('email', '==', email).get();
     if (!existingUser.empty) {
       return res.send("User Already Exists!");
     }
